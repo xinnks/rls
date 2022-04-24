@@ -28,6 +28,27 @@ router.get("/", () => {
   return rawHtmlResponse(page);
 })
 
+/**
+ * This route receives a short link param and redirects to full route
+ * @param {Request} {params}
+ * @returns {Response}
+ */
+router.get("/r/:short", async ({ params }) => {
+  let short = params.short;
+
+  let { state, body} = await getLink(short);
+  if(state === "error"){
+    // Return the HTML with the string to the client
+    return new Response(JSON.stringify({error: body.description}), {
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+  }
+  
+  // Redirect to url
+  return Response.redirect(body, 301)
+})
 
 /**
  * This route receives a request containing a full link, creates and returns a json Response containing the short link
