@@ -91,6 +91,14 @@ router.post("/shorten", async request => {
     }
   })
 })
+
+/**
+ * This route will match anything that hasn't hit a route defined
+above returning a 404 response
+ * @returns {Response}
+*/
+router.all("*", () => new Response("404, not found!", { status: 404 }))
+
 addEventListener('fetch', (event) => {
   const { request } = event;
   return event.respondWith(router.handle(request));
