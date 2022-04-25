@@ -19,7 +19,7 @@ const page = `
           <form id="shorten">
             <div class="flex flex-col md:flex-row w-full max-w-3xl flex-row p-2">
               <div>
-                <input name="link" class="p-2 text-black outline-none border-2 border-gray-400 focus:ring-1 focus:border-black" id="link" placeholder="Feed me a link" />
+                <input name="link" class="p-2 text-black outline-none border-2 border-gray-400 focus:ring-1 focus:border-black" id="link" placeholder="Feed me a link" required />
               </div>
               <div class="mt-4 md:mt-0">
                 <button class="hover:bg-blue border-2 border-black bg-black p-2 text-white">Shorten</button>
