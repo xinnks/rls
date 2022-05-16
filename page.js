@@ -3,18 +3,18 @@ const page = `
 <html>
   <head>
     <title>
-      RLS - Reliable Short Links
+      RLS - Reliable Link Shortener
     </title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
   </head>
   <body>
   
     <main class="flex h-[100vh] w-full p-4 select-none flex-col justify-center text-center">
       <div class="flex flex-1 flex-grow flex-col justify-center">
         <h1 class="text-5xl font-thin">RLS</h1>
-        <h2 class="m-1 text-lg opacity-50">Reliable short links.</h2>
+        <h2 class="m-1 text-lg opacity-50">Reliable Link Shortener.</h2>
         <div class="mx-auto text-lg font-thin opacity-50">
           <form id="shorten">
             <div class="flex flex-col md:flex-row w-full max-w-3xl flex-row p-2">
