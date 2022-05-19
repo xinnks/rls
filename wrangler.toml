@@ -3,7 +3,9 @@ type = "webpack"
 
 account_id = ""
 workers_dev = true
-route = ""
 zone_id = ""
 route = "rls.jamesinkala.com/*"
 compatibility_date = "2022-04-22"
+
+# SECRETS
+# FAUNA_SECRET
